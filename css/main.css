@@ -1,0 +1,28 @@
+@font-face {
+  font-family: roboto;
+  src: url(/assets/fonts/Roboto-Regular.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: roboto;
+  src: url(/assets/fonts/Roboto-Bold.ttf);
+  font-weight: bold;
+}
+
+body {
+  background-color: #36384D;
+  font-family: roboto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100vh;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.attribution {
+  position: aboslute;
+  bottom: 0;
+}
