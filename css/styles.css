@@ -2,7 +2,7 @@
   background-color: white;
   border-radius: 20px;
   max-width: 848px;
-  width: 100%;
+  width: 90%;
   padding: 1rem;
   margin: auto;
   display: flex;
@@ -10,9 +10,23 @@
   color: #242544;
 }
 
-.card main, .card__image {
+.card main, .desktop {
   flex-grow: 1;
   width: 50%;
+  flex-shrink: 1;
+  display: flex;
+}
+
+.card .card__title {
+  font-size: 3rem;
+}
+
+.desktop img {
+  width: 100%;
+}
+
+.mobile {
+  display: none;
 }
 
 .card main {
@@ -36,7 +50,7 @@
 
 .card__benefits-list li {
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 .card__benefits-list li::before {
   content: ' ';
@@ -44,6 +58,7 @@
   width: 21px;
   height: 21px;
   background-image: url("../assets/images/icon-list.svg");
+  flex-shrink: 0;
 }
 
 .card__form {
@@ -106,4 +121,58 @@ label:has(~input:invalid)::after {
 form:valid button {
   background: rgb(255,84,120);
   background: linear-gradient(90deg, rgba(255,84,120,1) 0%, rgba(255,105,62,1) 100%);
+}
+
+
+@media (min-width: 858px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+
+@media (min-width: 576px) and (max-width: 858px) {
+  html {
+    font-size: 14px;
+  }
+
+  .card .card__title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .desktop {
+    display: none;
+  }
+
+  .card {
+    flex-direction: column;
+    border-radius: 0;
+    padding: 0;
+    align-items: center;
+    width: 100%;
+  }
+
+  .card main {
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .card .card__title {
+    font-size: 2rem;
+  }
+
+  .mobile {
+    display: flex;
+    width: 100%;
+  }
+
+  .mobile img {
+    width: 100%;
+  }
+
+  html {
+    font-size: 16px;
+  }
 }
