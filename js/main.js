@@ -2,12 +2,10 @@ const form = document.querySelector("form");
 const input = form.querySelector("input");
 
 form.addEventListener("submit", (event) => {
-  event.preventDefault();
-
   if (!input.value) {
     input.required = true;
+    event.preventDefault();
   }
-
 })
 
 input.addEventListener("keyup", () => {
