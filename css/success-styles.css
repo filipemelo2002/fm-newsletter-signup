@@ -45,3 +45,30 @@
   background: linear-gradient(90deg, rgba(255,84,120,1) 0%, rgba(255,105,62,1) 100%);
   filter: drop-shadow(0px 9px 14px #737373);
 }
+
+
+@media (max-width: 426px) {
+  .card {
+    width: 100vw;
+    height: 100dvh;
+    margin: 0;
+    max-width: unset;
+    border-radius: 0;
+  }
+
+  .card img {
+    margin-top: 40%;
+    width: 3rem;
+  }
+
+  
+  .card p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .card button {
+    margin-top: auto;
+    font-size: 0.95rem;
+  }
+}
